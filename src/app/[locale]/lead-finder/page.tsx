@@ -27,7 +27,7 @@ export default function LeadFinderPage() {
 		setLoading(true);
 		try {
 			const results = await generateLeads({ niche, location, count });
-			setLeads(results);
+			setLeads(results.leads);
 			setHasSearched(true);
 		} catch (error) {
 			console.error(error);
