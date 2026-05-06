@@ -26,7 +26,7 @@ export default function LeadFinderPage() {
 		e.preventDefault();
 		setLoading(true);
 		try {
-			const results = await generateLeads(niche, location, count);
+			const results = await generateLeads({ niche, location, count });
 			setLeads(results);
 			setHasSearched(true);
 		} catch (error) {
