@@ -4,6 +4,10 @@ import ChatBot from '@/components/ChatBot'
 
 export const dynamic = 'force-dynamic'
 
+export function generateStaticParams() {
+	return [{ locale: 'es' }, { locale: 'en' }]
+}
+
 export default async function LocaleLayout({
 	children, params,
 }: {children: ReactNode; params: Promise<{locale: string}>}) {
