@@ -1,5 +1,5 @@
 export type Lead = {
-	id?: number
+	id: number
 	name: string
 	phone?: string | null
 	website?: string | null
