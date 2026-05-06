@@ -5,11 +5,13 @@ import { useParams } from "next/navigation";
 import { getString } from "@/lib/i18n";
 import { generateLeads } from "@/lib/api";
 
-const mockLeads = [
-	{ id: 1, name: "Skyline Architecture", website: "skyline-arch.com", niche: "Construcción", location: "Madrid, ES", status: "contacted", statusColor: "bg-emerald-500" },
-	{ id: 2, name: "Vanguard Tech", website: "vanguard.io", niche: "Tecnología", location: "Barcelona, ES", status: "verified", statusColor: "bg-blue-500" },
-	{ id: 3, name: "Organic Roots", website: "organicroots.com", niche: "Retail", location: "Valencia, ES", status: "rejected", statusColor: "bg-red-500" },
-	{ id: 4, name: "Marbella Estates", website: "+34 952 00 11 22", niche: "Real Estate", location: "Málaga, ES", status: "verified", statusColor: "bg-emerald-500" },
+import type { Lead } from "@/lib/types";
+
+const mockLeads: Lead[] = [
+	{ id: 1, name: "Skyline Architecture", website: "skyline-arch.com", niche: "Construcción", location: "Madrid, ES", status: "contacted", statusColor: "bg-emerald-500", source: "mock" },
+	{ id: 2, name: "Vanguard Tech", website: "vanguard.io", niche: "Tecnología", location: "Barcelona, ES", status: "verified", statusColor: "bg-blue-500", source: "mock" },
+	{ id: 3, name: "Organic Roots", website: "organicroots.com", niche: "Retail", location: "Valencia, ES", status: "rejected", statusColor: "bg-red-500", source: "mock" },
+	{ id: 4, name: "Marbella Estates", website: "+34 952 00 11 22", niche: "Real Estate", location: "Málaga, ES", status: "verified", statusColor: "bg-emerald-500", source: "mock" },
 ];
 
 export default function LeadFinderPage() {
