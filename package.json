@@ -1,6 +1,5 @@
 ﻿{
   "name": "leadgenpro-frontend",
-  "deploy": "vercel-deploy",
   "version": "0.1.0",
   "private": true,
   "scripts": {
